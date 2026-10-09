@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
  na montagem o state é 0, depois que alteramos o count no click, ele vai somando e vira 1...
      * O React compara o valor antigo com o novo: se 'count' mudou, o useEffect roda de novo.
      * Se qualquer outro estado mudar (que NÃO esteja no array), este useEffect NÃO será disparado.
+     * prevState --> Quando você passa uma função (callback), você diz ao React: "Não use a minha variável local; me dê o valor REAL e mais atualizado que está na fila da memória no exato momento da execução
  */
 
 const counterButtonClass =
@@ -17,7 +18,7 @@ export function Updating() {
 	console.log("SO MUDOU FORA DO USEEFFECT!");
 
 	function handleCountTwo() {
-		setCountTwo((prevState) => prevState + 2);
+		setCountTwo((prevState) => prevState + 2); //pegnado estado mais recente
 	}
 
 	function handleCount() {

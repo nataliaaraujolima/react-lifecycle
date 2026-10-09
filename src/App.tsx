@@ -1,7 +1,7 @@
 import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
-import { Updating } from "./components/lige-cycles/updating";
+import { UmmountingCleanup } from "./components/lige-cycles/unmounting-cleanup/unmounting-cleanup";
 
 function App() {
 	return (
@@ -34,7 +34,7 @@ function App() {
 				/>
 			</div>
 			<div>
-				<Updating />
+				<UmmountingCleanup />
 			</div>
 		</section>
 	);
