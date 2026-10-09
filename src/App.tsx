@@ -2,7 +2,7 @@ import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import "./App.css";
-import { useEffect } from "react";
+import { Mounting } from "./components/mounting";
 
 function App() {
 	/**
@@ -17,9 +17,6 @@ function App() {
 	 * atualizar um estado (ex: setState) DIRETO dentro do useEffect sem o array de dependências,
 	 * criando um ciclo: Atualiza Estado -> Re-renderiza -> Executa Efeito -> Atualiza Estado...
 	 */
-	useEffect(() => {
-		console.log("renderizando pela 1* vez");
-	}, []);
 
 	return (
 		<section id="center" className="flex flex-center">
@@ -29,7 +26,7 @@ function App() {
 				<img src={viteLogo} className="vite" alt="Vite logo" />
 			</div>
 			<div>
-				<h1>Ciclo de vida do react</h1>
+				<Mounting />
 			</div>
 		</section>
 	);
