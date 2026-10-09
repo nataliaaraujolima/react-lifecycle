@@ -15,11 +15,13 @@ import { useEffect } from "react";
 export const Mounting = () => {
 	useEffect(() => {
 		console.log("1* Ciclo = montagem");
-	});
+	}, []);
 
 	return (
-		<div className="flex flex-center">
-			<h1>Montando o componente pela 1* vez!</h1>
+		<div className="flex items-center justify-center">
+			<h1 className="my-8 text-[56px] font-medium tracking-[-1.68px] text-[#08060d] max-lg:my-5 max-lg:text-4xl dark:text-[#f3f4f6]">
+				Montando o componente pela 1* vez!
+			</h1>
 		</div>
 	);
 };
